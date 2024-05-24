@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.02.2
+%define		kdeappsver	24.05.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kcalutils
 Summary:	kcalutils
 Name:		ka6-%{kaname}
-Version:	24.02.2
+Version:	24.05.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	33df0d50b180046de25c5adfbb811c6c
+# Source0-md5:	42e3b47a6482f527334cdaf171355b9c
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel
