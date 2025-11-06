@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kcalutils
 Summary:	kcalutils
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	2
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	9e931c93c302fc641e897b86fe389ea8
+# Source0-md5:	be92af229dbd65b469486a0aa44aedf0
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel
@@ -89,9 +89,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libKPim6CalendarUtils.so.*.*
+%{_libdir}/libKPim6CalendarUtils.so.*.*
 %ghost %{_libdir}/libKPim6CalendarUtils.so.6
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/ktexttemplate/kcalendar_grantlee_plugin.so
+%{_libdir}/qt6/plugins/kf6/ktexttemplate/kcalendar_grantlee_plugin.so
 %{_datadir}/qlogging-categories6/kcalutils.categories
 %{_datadir}/qlogging-categories6/kcalutils.renamecategories
 
